@@ -1,0 +1,4 @@
+venv/
+logs/
+AI_ANIME_RECOMMENDER_AIOPS.egg-info
+.env
