@@ -143,6 +143,22 @@ git push origin main
   - **Username**: `data-guru0`
   - **Password**: GitHub token (paste, it's invisible)
 
+
+### GCP Firewall Rule Setup
+
+GCP -> Network Security -> Firewall Policies -> Create firewall rule
+Name: allow-jenkins
+Description: Allow all traffic (for jenkins demo)
+Logs: Off
+Network: default
+Direction : Ingress
+Action : allow
+Targets : All instances in the network
+Souce Filter : IPv4 ranges
+Source IPv4 ranges : 0.0.0.0/0
+Allowed protocols and ports : all
+
+create rule
 ---
 
 
