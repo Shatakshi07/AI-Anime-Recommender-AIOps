@@ -168,12 +168,18 @@ create rule
 ## Point Docker to Minikube
 eval $(minikube docker-env)
 
+## To create docker image
 docker build -t llmops-app:latest .
 
+docker images
+
+## Put your tokens/keys here, this will inject your env variables inside the kubernetes cluster
+## llmops-secrets name matches that in k8s.yaml file in repo
 kubectl create secret generic llmops-secrets \
   --from-literal=GROQ_API_KEY="" \
   --from-literal=HUGGINGFACEHUB_API_TOKEN=""
 
+## This will deploy you application
 kubectl apply -f llmops-k8s.yaml
 
 
