@@ -182,10 +182,9 @@ kubectl create secret generic llmops-secrets \
 ## This will deploy you application
 kubectl apply -f llmops-k8s.yaml
 
-
 kubectl get pods
-
-### U will see pods runiing
+## shows 1 running because we have created just one replica in k8s.yaml file
+### U will see pods running
 
 
 # Do minikube tunnel on one terminal
