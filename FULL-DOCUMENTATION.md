@@ -276,6 +276,6 @@ Now u can see metrics related to your kubernetes cluster..
 
 ---Explore it for yourself now 
 
----Make sure to do cleanup 
+---Make sure to do cleanup i.e. delete the vm instance
 
 ```
