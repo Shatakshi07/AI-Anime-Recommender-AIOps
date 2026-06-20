@@ -188,23 +188,25 @@ kubectl get pods
 
 
 # Do minikube tunnel on one terminal
-
+# app is running for you to access on internet
 minikube tunnel
 
 
-# Open another terminal
+# Open another terminal ussing SSH in vm instance
+kubectl get svc
 
 kubectl port-forward svc/llmops-service 8501:80 --address 0.0.0.0
 
-## Now copy external ip and :8501 and see ur app there....
+## Now copy external ip and :8501 from vm instance and see ur app there on browser....
 
-
+## Two terminals are being used: one for minikube tunnel, another for running our app
 ```
 
 ### 6. GRAFANA CLOUD MONITORING
 
 ```bash
 ## Open another VM terminal for Grfana cloud
+kubectl get ns    # to ge namespace
 
 kubectl create ns monitoring
 
